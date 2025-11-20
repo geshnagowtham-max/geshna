@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>User-Friendly & Accessible Web Example</title>
+  <style>
+    body {
+      background: #f7fafc;
+      color: #212121;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #3163be;
+      color: #fff;
+      padding: 18px;
+      text-align: center;
+    }
+    nav {
+      background: #e3e9f7;
+      padding: 15px 0;
+      text-align: center;
+    }
+    nav a {
+      color: #3163be;
+      margin: 0 20px;
+      padding: 9px 16px;
+      text-decoration: none;
+      border-radius: 3px;
+    }
+    nav a:focus, nav a:hover {
+      background: #bcd7ff;
+      outline: 2px solid #000;
+    }
+    main {
+      max-width: 640px;
+      margin: 32px auto;
+      background: #fff;
+      border-radius: 7px;
+      box-shadow: 0 2px 18px rgba(32,54,90,0.09);
+      padding: 28px;
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+    }
+    input, button {
+      font-size: 1em;
+      padding: 8px 10px;
+      border-radius: 4px;
+      border: 1px solid #b0b0b0;
+      margin-bottom: 14px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    button {
+      background: #3163be;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    button:focus, button:hover {
+      background: #183b74;
+      outline: 2px solid #000;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>User-Friendly & Accessible Example</h1>
+    <p>This page demonstrates clear layout, readable color contrast, and accessible navigation.</p>
+  </header>
+  <nav>
+    <a href="#features" tabindex="1">Features</a>
+    <a href="#contact" tabindex="2">Contact</a>
+    <a href="#help" tabindex="3">Help</a>
+  </nav>
+  <main>
+    <h2 id="features">Accessibility Features</h2>
+    <ul>
+      <li>High color contrast for easy reading</li>
+      <li>Simple and consistent page layout</li>
+      <li>Keyboard navigation (try Tab and Enter)</li>
+      <li>Form labels for screen readers</li>
+      <li>Descriptive button text</li>
+    </ul>
+    <form aria-label="Easy Contact Form">
+      <label for="username">Your Name:</label>
+      <input id="username" name="username" type="text" required>
+      
+      <label for="usermsg">Your Message:</label>
+      <input id="usermsg" name="usermsg" type="text" required>
+      
+      <button type="submit">Send Message</button>
+    </form>
+    <img src="accessibility.png" alt="Illustration showing accessibility features" width="160">
+  </main>
+</body>
+</html>

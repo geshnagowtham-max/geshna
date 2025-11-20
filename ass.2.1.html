@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap Navbar Color Change on Scroll</title>
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    /* Initial transparent navbar */
+    .navbar {
+      transition: background-color 0.4s ease;
+      background-color: transparent;
+    }
+    /* Navbar background when scrolled */
+    .navbar.scrolled {
+      background-color: #0d6efd !important; /* Bootstrap primary color or any color */
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" href="#">Brand</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-white" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#">Features</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#">Pricing</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Content to enable scrolling -->
+<div style="height: 2000px; padding-top: 70px;">
+  <h1 class="text-center mt-5 pt-5">Scroll Down to See Navbar Color Change</h1>
+</div>
+
+<!-- Bootstrap JS bundle (with Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Detect scroll and toggle 'scrolled' class on navbar
+  window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+</script>
+
+</body>
+</html>

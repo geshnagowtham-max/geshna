@@ -1,0 +1,70 @@
+<html> 
+<head> 
+<title>Interactive Boxes</title> 
+<style type="text/css"> 
+#container { 
+  width: 850px; 
+  height: 320px; 
+  border: 2px solid darkblue; 
+  background-color: lightyellow; 
+  padding: 10px; 
+} 
+ 
+.box { 
+  width: 30px; 
+  height: 30px; 
+  float: left; 
+  margin: 80px; 
+  transition: all 2s ease; 
+  border-radius: 5px; 
+} 
+ 
+/* Box 1 */ 
+#box1 { 
+  background-color: lightgreen; 
+  transition: width 2s, height 2s, background-color 2s; 
+} 
+#box1:hover { 
+  width: 180px; 
+  height: 180px; 
+  background-color: rgb(244, 153, 18); 
+} 
+ 
+/* Box 2 */ 
+#box2 { 
+  background-color: rgb(163, 161, 161); 
+  transition: all 3s linear; 
+  transition-delay: 0.5s; 
+} 
+#box2:hover { 
+  width: 180px; 
+  height: 180px; 
+  background-color: rgb(194, 92, 177); 
+} 
+ 
+/* Box 3 */ 
+#box3 { 
+  background-color: rgb(226, 190, 63); 
+  transition: all 3s ease-in-out; 
+  transition-delay: 1s; 
+} 
+#box3:hover { 
+  width: 180px; 
+  height: 180px; 
+  background-color: rgb(44, 42, 56); 
+} 
+</style> 
+</head> 
+<body> 
+ 
+<h2>Hover Over the Boxes</h2> 
+<p>Each box grows and changes color with a different transition style:</p> 
+ 
+<div id="container"> 
+  <div id="box1" class="box"></div> 
+  <div id="box2" class="box"></div> 
+  <div id="box3" class="box"></div> 
+</div> 
+ 
+</body> 
+</html> 

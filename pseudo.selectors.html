@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <title>Pseudo Selectors</title>
+    </head>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #bcc1d1;
+    }
+    header {
+      background: #51434e;
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: rgb(169, 141, 141);
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+    .destinations {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .destination {
+      flex: 1 1 250px;
+      border-radius: 5px;
+      background: #eee;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+      text-align: center;
+    }
+    .destination img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .destination h3 {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+    }
+    .article-section {
+      margin-bottom: 2rem;
+    }
+    .article-section h2 {
+      border-left: 4px solid #2980b9;
+      padding-left: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Wanderlust Diaries</h1>
+    <p>Discover breathtaking destinations and travel adventures!</p>
+  </header>
+  <div class="container">
+    <div class="destinations">
+      <div class="destination">
+        <img src="D:\Users\Admin\Downloads\shoe.webp" alt="SHOE">
+        <h3>SHOE</h3>
+        <button type="button" class="btn-outline-secondary">Click here to buy</button>
+      </div>
+      <div class="destination">
+        <img src="D:\Users\Admin\Downloads\car.jpg" alt="CAR">
+        <h3>CAR</h3>
+        <button>Click here to buy</button>
+      </div>
+      <div class="destination">
+        <img src="D:\Users\Admin\Downloads\bag.webp" alt="BAG">
+        <h3>BAG</h3>
+        <button>Click here to buy</button>
+      </div>
+    </div>
+    <div class="article-section">
+      <h2>SHOE</h2>
+      <p>
+        These shoes are perfect for both casual wear and athletic activities. They offer great comfort, support, and style to keep you going all day long.
+      </p>
+    </div>
+    <div class="article-section">
+      <h2>CAR</h2>
+      <p>
+        This car combines performance, efficiency, and cutting-edge technology. It provides a smooth ride, advanced safety features, and a luxurious interior for an exceptional driving experience.
+      </p>
+    </div>
+    <div class="article-section">
+      <h2>BAG</h2>
+      <p>
+        This BAG is very useful for carrying your essentials while traveling. It is spacious, durable, and stylish, making it perfect for any adventure.
+      </p>
+    </div>
+  </div>
+</body>
+</html>

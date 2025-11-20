@@ -1,0 +1,85 @@
+<html>
+<head>
+  <title>Online Bookstore - Product Listing</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      color: #333;
+    }
+    .book-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    .book-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      width: 250px;
+      padding: 18px;
+      box-shadow: 0 2px 6px #eee;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .book-cover {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+    .book-title {
+      font-size: 1.1em;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #283593;
+    }
+    .book-price {
+      color: #00796b;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+    .buy-button {
+      background: #283593;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 8px 15px;
+      cursor: pointer;
+      font-size: 0.95em;
+      transition: background 0.2s;
+    }
+    .buy-button:hover {
+      background: #3949ab;
+    }
+  </style>
+</head>
+<body>
+  <h1>BOOKS TO LEARN CODING</h1>
+  <div class="book-list">
+    <div class="book-card">
+      <img class="book-cover" src="D:\Users\Admin\Downloads\python.img"alt="Book 1">
+      <div class="book-title">Python Programming:</div>
+      <div class="book-price">₹499</div>
+      <button class="buy-button">Buy Now</button>
+    </div>
+    <div class="book-card">
+      <img class="book-cover" src="D:\Users\Admin\Downloads\html.img" alt="Book 2">
+      <div class="book-title">HTML for Web Development</div>
+      <div class="book-price">₹599</div>
+      <button class="buy-button">Buy Now</button>
+    </div>
+    <div class="book-card">
+      <img class="book-cover" src="D:\Users\Admin\Downloads\css.book.jpeg"alt="Book 3">
+      <div class="book-title">CSS for Web Development</div>
+      <div class="book-price">₹599</div>
+      <button class="buy-button">Buy Now</button>
+    </div>
+  </div>
+</body>
+</html>
