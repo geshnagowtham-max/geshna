@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Course Registration System</title>
+
+  <style>
+    /* same CSS as before */
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f4f6;
+      color: #111827;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 30px auto;
+      padding: 0 16px;
+    }
+
+    .site-header {
+      background: #1f2937;
+      color: #f9fafb;
+      text-align: center;
+      padding: 18px 10px;
+    }
+
+    .site-header h1 {
+      font-size: 1.8rem;
+      margin-bottom: 4px;
+    }
+
+    .site-header p {
+      font-size: 0.95rem;
+      opacity: 0.8;
+    }
+
+    .site-footer {
+      text-align: center;
+      padding: 16px;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .card h2 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      color: #111827;
+    }
+
+    .form-group {
+      margin-bottom: 14px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 0.9rem;
+      color: #374151;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select {
+      width: 100%;
+      padding: 8px 10px;
+      border-radius: 4px;
+      border: 1px solid #d1d5db;
+      font-size: 0.95rem;
+      background: #f9fafb;
+    }
+
+    input:focus,
+    select:focus {
+      outline: none;
+      border-color: #2563eb;
+      box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.25);
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .course-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 0.95rem;
+    }
+
+    .course-table th,
+    .course-table td {
+      padding: 8px 10px;
+      border: 1px solid #e5e7eb;
+      text-align: left;
+    }
+
+    .course-table thead {
+      background: #e5e7eb;
+    }
+
+    .course-table tbody tr:nth-child(even) {
+      background: #f9fafb;
+    }
+
+    .actions {
+      margin-top: 16px;
+      display: flex;
+      gap: 10px;
+    }
+
+    button {
+      cursor: pointer;
+      border-radius: 4px;
+      border: none;
+      padding: 8px 14px;
+      font-size: 0.95rem;
+    }
+
+    .btn-primary {
+      background: #2563eb;
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: #1d4ed8;
+    }
+
+    .btn-secondary {
+      background: #e5e7eb;
+      color: #111827;
+    }
+
+    .btn-secondary:hover {
+      background: #d1d5db;
+    }
+
+    @media (max-width: 600px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .site-header h1 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <h1>Course Registration System</h1>
+    <p>Department of Computer Science</p>
+  </header>
+
+  <main class="container">
+    <!-- Wrap everything in ONE form -->
+    <form id="regForm" onsubmit="showMessage(event)">
+      <!-- Student details -->
+      <section class="card">
+        <h2>Student Information</h2>
+
+        <div class="grid-2">
+          <div class="form-group">
+            <label for="studentId">Student ID</label>
+            <input type="text" id="studentId" required />
+          </div>
+          <div class="form-group">
+            <label for="studentName">Full Name</label>
+            <input type="text" id="studentName" required />
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="form-group">
+            <label for="program">Program</label>
+            <input type="text" id="program" placeholder="B.Tech CSE" />
+          </div>
+          <div class="form-group">
+            <label for="semester">Semester</label>
+            <select id="semester">
+              <option value="">Select semester</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email ID</label>
+          <input type="email" id="email" />
+        </div>
+      </section>
+
+      <!-- Course selection -->
+      <section class="card">
+        <h2>Course Selection</h2>
+
+        <table class="course-table">
+          <thead>
+            <tr>
+              <th>Select</th>
+              <th>Course Code</th>
+              <th>Course Title</th>
+              <th>Credits</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="checkbox" name="course" /></td>
+              <td>CS101</td>
+              <td>Introduction to Programming</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="course" /></td>
+              <td>CS201</td>
+              <td>Data Structures</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="course" /></td>
+              <td>CS205</td>
+              <td>Discrete Mathematics</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="course" /></td>
+              <td>CS301</td>
+              <td>Database Systems</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="course" /></td>
+              <td>CS310</td>
+              <td>Computer Networks</td>
+              <td>3</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="actions">
+          <button type="submit" class="btn-primary">Submit Registration</button>
+          <button type="reset" class="btn-secondary">Clear</button>
+        </div>
+
+        <!-- Message area -->
+        <p id="msg" style="margin-top:10px; color:green; font-weight:bold;"></p>
+      </section>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Course Registration System</p>
+  </footer>
+
+  <script>
+    function showMessage(event) {
+      event.preventDefault(); // stop real submit
+      document.getElementById("msg").textContent =
+        "Your response has been submitted.";
+    }
+  </script>
+</body>
+</html>
