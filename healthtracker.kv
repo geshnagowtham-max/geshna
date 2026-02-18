@@ -1,0 +1,34 @@
+<MainLayout>:
+    orientation: "vertical"
+    padding: 30
+    spacing: 20
+
+    Label:
+        text: "Health Step Tracker App"
+        font_size: 26
+        size_hint_y: 0.2
+
+    TextInput:
+        id: age_input
+        hint_text: "Enter Age"
+        multiline: False
+        input_filter: "int"
+        size_hint_y: 0.15
+
+    TextInput:
+        id: weight_input
+        hint_text: "Enter Weight (kg)"
+        multiline: False
+        input_filter: "float"
+        size_hint_y: 0.15
+
+    Button:
+        text: "Predict Daily Steps"
+        size_hint_y: 0.15
+        on_press: root.predict_steps()
+
+    Label:
+        id: result_label
+        text: "Result will appear here"
+        font_size: 18
+        size_hint_y: 0.35
